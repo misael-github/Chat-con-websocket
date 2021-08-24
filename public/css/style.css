@@ -25,6 +25,7 @@ section {
   display: flex;
   display: flex;
   justify-content: center;
+  
 }
 
 h1 {
@@ -51,12 +52,11 @@ h1 {
 .chat {
   background-color: #08d9d6;
   width: 100%;
-  /* margin: auto; */
   margin-top: 0rem;
   border-radius: 0.4rem;
   padding-top: 2%;
   display: none;
-  /* display:flex; */
+
 }
 /* @media (max-width: 960px) {
   .chat {
@@ -77,8 +77,8 @@ h1 {
   width: 90%;
   min-height: 10rem;
   border-radius: 0.5rem;
-  height: 70vh;
-  max-height: 70vh;
+  height: 75vh;
+  max-height: 75vh;
 }
 
 .escribiendo {
