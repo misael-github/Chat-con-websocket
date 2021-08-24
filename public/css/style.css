@@ -14,7 +14,7 @@ body {
   }
 }
 section {
-  width:80%;
+  width:100%;
 
   height: auto;
 }
@@ -50,19 +50,19 @@ h1 {
 
 .chat {
   background-color: #08d9d6;
-  width: 70%;
-  margin: auto;
-  margin-top: 3.5rem;
+  width: 100%;
+  /* margin: auto; */
+  margin-top: 0rem;
   border-radius: 0.4rem;
   padding-top: 2%;
   display: none;
   /* display:flex; */
 }
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   .chat {
     width: 100%;
   }
-}
+} */
 .texto {
   display: flex;
   overflow-y: auto; /* esto hace que aparezca el scroll despues de cierta cantidad de mensajes*/
@@ -77,6 +77,8 @@ h1 {
   width: 90%;
   min-height: 10rem;
   border-radius: 0.5rem;
+  height: 60vh;
+  max-height: 60vh;
 }
 
 .escribiendo {
@@ -169,10 +171,10 @@ h1 {
 }
 @media (max-width: 960px) {
   #usuario {
-    width: 100%;
+    width: 80%;
   }
   #usuariobtn {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -181,14 +183,13 @@ h1 {
 }
 
 .conexion {
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   background: rgba(170, 169, 169, 0.5);
   border: 2px solid gray;
-  border-radius: 1rem;
-
+  border-radius: 0.5rem;
   width: 80%;
 }
 aside {
@@ -200,15 +201,17 @@ aside {
     width: 80%;
   }
   .conexion {
-    margin: 4rem auto;
+    width: 100%;
+  
   }
   .conexion2 {
-    margin: 20px auto;
+    margin: 40px auto;
   }
 }
 .conexion2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 15px auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .conexion3 {
