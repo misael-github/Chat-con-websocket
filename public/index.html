@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d33c08a0bc.js" crossorigin="anonymous"></script>
+    <title>CHAT</title>
+</head>
+
+<body>
+
+    <body>
+        
+        <div class="container">
+            <header class="encabezado">
+                <div>
+                    <h1>Mi chat <i class="far fa-comment-dots"></i></h1>
+                </div>
+
+            </header>
+            <div class="container2">
+                <section>
+                    <div class="entradaU">
+                        <p class="etiqueta">Ingrese su nombre para el chat</p>
+                        <input type="text" name="usuario" id="usuario" placeholder="">
+                        <input type="submit" value="Ingresar" id="usuariobtn">
+                    </div>
+                    <div class="chat cuadro">
+                        <div class="texto chat-texto" id="chat-texto">
+
+                        </div>
+                        <div class="contenedor-input">
+                            <input type="text" placeholder="Escribe un mensaje" id="input1">
+                            <button type="button" id="input2"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                        <span class="escribiendo"></span>
+                    </div>
+                </section>
+                <aside>
+                    <div>
+                    </div>
+                    <div class="conexion">
+                        <p class="conexion2">Usuarios Conectados:</p>
+                        <ul class="conexion3">
+
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/front.js"></script>
+    </body>
+</body>
+
+</html>
