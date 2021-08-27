@@ -23,8 +23,8 @@ function hora0(){
         secondsZero = `${horario.getSeconds()}`
     }
     horaMensaje = `${hoursZero}:${minutesZero}:${secondsZero}`
-    console.log(horaMensaje)
-    console.log(horario.getHours(),horario.getMinutes(),horario.getSeconds())
+    // console.log(horaMensaje)
+    // console.log(horario.getHours(),horario.getMinutes(),horario.getSeconds())
 }
 
 // hora0()
@@ -35,7 +35,7 @@ const usuarioNombre = usuario.value.toUpperCase()
 const chatCuadro = document.querySelector(".chat")
 
 const chat = document.querySelector('.texto')
-const conectados2 = document.querySelector('.conexion3')
+const conectados2 = document.querySelector('.list-conectados')
 
 
 //Con esta funcion hago que el scroll del chat siempre este en el último mensaje
@@ -82,16 +82,9 @@ socket.on("mensaje-U", (conectados) => {
      
 })
 
-// socket.on("mensaje-Up", () => {
-//     html2 +=`
-//         <li class="nombreU"> ${item.nombre} - (YO) </li>
-//     `       
-//     conectados2.innerHTML = html2
-// })
-
 //Con esto recibo solo en consola los mensajes de conexion y desconexion de algun usuario desde el back
 socket.on("mensaje-conexion", (data)=>{
-    console.log(data)
+    // console.log(data)
 })
 
 //Con esto recibo los mensajes, junto con el nombre de usuario de los demas, y los agrego al chat.
@@ -103,8 +96,8 @@ socket.on("mensaje-chat", (data) =>{
     mensajes.forEach(item => {
         hora0()
         html += `
-            <div class="mensaje-chat"><p> ${item.usuario} - ${item.mensaje.mensaje} </p><small class="hora">${horaMensaje}</small></div>
-        `       
+            <div class="mensaje-chat"><p class="text-message"> ${item.usuario} - ${item.mensaje.mensaje} </p><small class="hora">${horaMensaje}</small></div>
+        `   
     })
     // console.log(html)
     chat.innerHTML = html
@@ -118,7 +111,7 @@ let mensaje = document.querySelector("#input1")
 const prueba = () => {
     hora0()
     socket.emit("mensaje", {mensaje : mensaje.value})
-    // console.log(mensaje.value)
+    console.log(mensaje.value)
     html += `
         <div class="mensaje-chat-propio"><small class="horaPropio">${horaMensaje}</small><p>  ${mensaje.value} - YO</p></div>
     `
